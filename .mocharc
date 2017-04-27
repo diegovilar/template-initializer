@@ -1,0 +1,2 @@
+--compilers ts:node_modules/ts-node/register
+test/**/*.[jt]s

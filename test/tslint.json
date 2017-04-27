@@ -1,0 +1,12 @@
+// Extende as configurações do TSLint para serem mais permissivas nos arquivos de testes
+{
+  "extends": "../tslint.json",
+  "rules": {
+    "member-access": false,
+    "no-empty": false,
+
+    // tslint-microsoft-contrib rules
+    // https://github.com/Microsoft/tslint-microsoft-contrib
+    "missing-jsdoc": false
+  }
+}

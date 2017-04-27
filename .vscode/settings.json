@@ -1,0 +1,42 @@
+// Place your settings in this file to overwrite default and user settings.
+{
+
+  // Habilitar para javascript
+  // "lcov.sourceMaps": true,
+  "lcov.path": "./coverage/lcov.info",
+  "lcov.branchCoverage": "simple",
+  "lcov.watch": [{
+    "pattern": "coverage/**.info",
+    "command": "ls"
+  }],
+
+  "editor.rulers": [120],
+  "editor.detectIndentation": false,
+  "editor.dragAndDrop": true,
+
+  "files.exclude": {
+    "**/node_modules": true,
+    "**/*.js": {
+      "when": "$(basename).ts"
+    },
+    "**/*.css": {
+      "when": "$(basename).scss"
+    },
+    "**/*.map": true,
+    "**/desktop.ini": true,
+    "build": true,
+    "build-test": true,
+    "debug": true,
+    "dist": true,
+    ".nyc_output": true,
+    "coverage": true
+  },
+
+  "git.confirmSync": true,
+
+  "typescript.check.tscVersion": true,
+  "typescript.referencesCodeLens.enabled": true,
+  "typescript.implementationsCodeLens.enabled": true,
+  "typescript.tsdk": "./node_modules/typescript/lib"
+
+}

@@ -1,0 +1,81 @@
+{
+  // See https://go.microsoft.com/fwlink/?LinkId=733558
+  // for the documentation about the tasks.json format
+  "version": "0.1.0",
+  "_runner": "terminal",
+  "command": "npm",
+  "suppressTaskName": true,
+  "isShellCommand": true,
+  "echoCommand": false,
+  "tasks": [{
+    "taskName": "build",
+    "args": ["run", "build_exit0"],
+    "isBuildCommand": true,
+    "problemMatcher": ["$tsc"]
+  }, {
+    "taskName": "watch",
+    "args": ["run", "watch_exit0"],
+    "isBackground": true,
+    "problemMatcher": ["$tsc-watch"]
+  }, {
+    "taskName": "test",
+    "args": ["run", "test_exit0"],
+    "isTestCommand": true
+  }, {
+    "taskName": "lint",
+    "args": ["run", "lint_exit0"],
+    "problemMatcher": [{
+        "owner": "tslint",
+        "severity": "warning",
+        "fileLocation": "absolute",
+        "pattern": {
+          "regexp": "^(\\S[:][\\/]\\S.*)\\[(\\d+), (\\d+)\\]:\\s+(.*)$",
+          "file": 1,
+          "line": 2,
+          "column": 3,
+          "message": 4
+        }
+      },
+      {
+        "owner": "tslint",
+        "severity": "warning",
+        "fileLocation": ["relative", "${workspaceRoot}"],
+        "pattern": {
+          "regexp": "^(\\S[^:][^\\/]\\S.*)\\[(\\d+), (\\d+)\\]:\\s+(.*)$",
+          "file": 1,
+          "line": 2,
+          "column": 3,
+          "message": 4
+        }
+      }
+    ]
+  }, {
+    "taskName": "lint (fix)",
+    "args": ["run", "lint:fix_exit0"],
+    "problemMatcher": [{
+        "owner": "tslint",
+        "severity": "warning",
+        "fileLocation": "absolute",
+        "pattern": {
+          "regexp": "^(\\S[:][\\/]\\S.*)\\[(\\d+), (\\d+)\\]:\\s+(.*)$",
+          "file": 1,
+          "line": 2,
+          "column": 3,
+          "message": 4
+        }
+      },
+      {
+        "owner": "tslint",
+        "severity": "warning",
+        "fileLocation": ["relative", "${workspaceRoot}"],
+        "pattern": {
+          "regexp": "^(\\S[^:][^\\/]\\S.*)\\[(\\d+), (\\d+)\\]:\\s+(.*)$",
+          "file": 1,
+          "line": 2,
+          "column": 3,
+          "message": 4
+        }
+      }
+    ]
+  }]
+}

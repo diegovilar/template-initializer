@@ -1,0 +1,39 @@
+{
+  "$schema": "http://json.schemastore.org/tsconfig",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "target": "es2015",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "allowJs": false,
+    "declaration": true,
+    "sourceMap": true,
+    "inlineSources": false,
+    "pretty": true,
+    "noImplicitAny": true,
+    "suppressImplicitAnyIndexErrors": false,
+    "noEmitHelpers": true,
+    "importHelpers": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "alwaysStrict": true,
+    "strictNullChecks": true,
+    "noEmitOnError": true,
+    "noImplicitReturns": true,
+    "noUnusedLocals": false,
+    "noImplicitThis": true,
+    "newLine": "LF",
+    "charset": "utf-8",
+    "lib": [
+      "es2015"
+    ],
+    "paths": {
+      "*": ["typings/*"]
+    }
+  },
+  "include": [
+    "src/**/*.ts",
+    "test/**/*.ts",
+    "typings/**/*.ts"
+  ]
+}
