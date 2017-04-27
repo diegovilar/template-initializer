@@ -164,7 +164,6 @@ export class Initializer {
                 }
 
                 out(cyan('Pronto!'));
-                out();
 
                 return;
             }

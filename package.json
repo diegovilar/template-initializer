@@ -1,6 +1,6 @@
 {
-  "name": "@diegovilar/template-initializer",
-  "version": "0.9.0",
+  "name": "template-initializer",
+  "version": "0.9.1",
   "description": "An easy way to make project templates initializable",
   "license": "MIT",
   "author": "Diego Vilar <diegovilar@gmail.com>",
@@ -23,7 +23,7 @@
   "types": "build/index.d.ts",
   "typings": "build/index.d.ts",
   "scripts": {
-    "prepublishOnly": "npm run lint && npm run test && npm run build",
+    "--prepublishOnly": "npm run lint && npm run test && npm run build",
     "start": "npm run watch",
     "tsc:build": "tsc -p src/tsconfig.json ",
     "tsc:build_exit0": "tsc -p src/tsconfig.json || exit 0",

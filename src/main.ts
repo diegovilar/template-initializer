@@ -18,6 +18,7 @@ function exit(code = 0, reason?: any): void {
         console.error(reason);
     }
 
+    console.log();
     process.exit(code);
 
 }
@@ -96,9 +97,6 @@ function findTsConfig(startDir: string): string | undefined {
         const originalConfigPath = configPath;
         configPath = getInitializerConfigFile(configPath);
 
-        console.info(`originalConfigPath = ${originalConfigPath}`);
-        console.info(`configPath = ${configPath}`);
-
         if (!configPath) {
             throw new Error(`Could not find the configuration file: ${originalConfigPath}`);
         }
@@ -109,6 +107,10 @@ function findTsConfig(startDir: string): string | undefined {
                 project: findTsConfig(path.dirname(configPath))
             });
         }
+
+        console.log();
+        console.log(`template-initializer: Initializing template with config ${configPath}`);
+        console.log();
 
         const config: IConfig = require(configPath);
 
